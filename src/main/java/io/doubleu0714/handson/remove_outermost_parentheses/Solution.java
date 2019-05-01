@@ -17,7 +17,6 @@ public class Solution {
             }
 
             if(primitiveCount == 0) {
-                Arrays.copyOfRange(sArr, 1, i);
                 // returnValue.append(S.substring(1, i));
                 returnValue.append(Arrays.copyOfRange(sArr, 1, i));
                 // S = S.substring(i + 1);
