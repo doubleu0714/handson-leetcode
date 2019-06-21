@@ -2,6 +2,7 @@ package io.doubleu0714.handson.linkedlist_random_node;
 
 import static org.junit.Assert.assertThat;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import org.junit.Test;
@@ -14,8 +15,10 @@ public class SolutionTest {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
         Solution sol = new Solution(head);
-        assertThat(sol.getRandomNumber(), is(sol.getRandom()));
+        assertThat(sol.getRandom(), anyOf(is(1), is(2), is(3), is(4), is(5)));
     }
     @Test
     public void 랜덤테스트() {
